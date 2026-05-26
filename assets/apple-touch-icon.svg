@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#16252f"/>
+      <stop offset="0.6" stop-color="#0d1218"/>
+      <stop offset="1" stop-color="#0a0c10"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5a9fbe" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#5a9fbe" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="180" height="180" fill="#0a0c10"/>
+  <rect width="180" height="180" fill="url(#bg)"/>
+  <circle cx="90" cy="90" r="80" fill="url(#halo)"/>
+  <svg x="22" y="22" width="136" height="136" viewBox="2555 2555 3355 3355" preserveAspectRatio="xMidYMid meet">
+    <path fill="#f1ece1" d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/>
+  </svg>
+</svg>

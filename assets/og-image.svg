@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;display=swap');
+      .wordmark { font-family: 'Fraunces', 'Times New Roman', serif; font-weight: 400; letter-spacing: -2px; }
+      .tagline  { font-family: 'Fraunces', 'Times New Roman', serif; font-style: italic; font-weight: 300; letter-spacing: 0.5px; }
+      .ventures { font-family: 'Fraunces', 'Times New Roman', serif; font-weight: 400; letter-spacing: 3px; }
+    </style>
+    <radialGradient id="orbTop" cx="0.5" cy="0.32" r="0.5">
+      <stop offset="0" stop-color="#5a9fbe" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#5a9fbe" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbL" cx="0.08" cy="0.5" r="0.4">
+      <stop offset="0" stop-color="#7ab8d4" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7ab8d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbR" cx="0.92" cy="0.6" r="0.4">
+      <stop offset="0" stop-color="#5a9fbe" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#5a9fbe" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="markHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5a9fbe" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#5a9fbe" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="#0a0c10"/>
+  <rect width="1200" height="630" fill="url(#orbL)"/>
+  <rect width="1200" height="630" fill="url(#orbR)"/>
+  <rect width="1200" height="630" fill="url(#orbTop)"/>
+
+  <!-- subtle dot lattice -->
+  <g fill="#2a3441" opacity="0.5">
+    <circle cx="150" cy="90" r="1.6"/><circle cx="350" cy="90" r="1.6"/><circle cx="550" cy="90" r="1.6"/>
+    <circle cx="650" cy="90" r="1.6"/><circle cx="850" cy="90" r="1.6"/><circle cx="1050" cy="90" r="1.6"/>
+    <circle cx="150" cy="540" r="1.6"/><circle cx="350" cy="540" r="1.6"/><circle cx="550" cy="540" r="1.6"/>
+    <circle cx="650" cy="540" r="1.6"/><circle cx="850" cy="540" r="1.6"/><circle cx="1050" cy="540" r="1.6"/>
+  </g>
+
+  <!-- hex mark with halo -->
+  <circle cx="600" cy="200" r="115" fill="url(#markHalo)"/>
+  <svg x="515" y="115" width="170" height="170" viewBox="2555 2555 3355 3355" preserveAspectRatio="xMidYMid meet">
+    <path fill="#f1ece1" d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/>
+  </svg>
+
+  <!-- wordmark -->
+  <text x="600" y="400" class="wordmark" font-size="96" fill="#f1ece1" text-anchor="middle">
+    He<tspan fill="#5a9fbe">X</tspan>Talent
+  </text>
+
+  <!-- tagline -->
+  <text x="600" y="452" class="tagline" font-size="32" fill="#5a9fbe" text-anchor="middle">
+    The Humanistic eXchange
+  </text>
+
+  <!-- ventures footer -->
+  <line x1="380" y1="528" x2="820" y2="528" stroke="#2f3743" stroke-width="1"/>
+  <text x="600" y="565" class="ventures" font-size="16" fill="#8a8b8b" text-anchor="middle">
+    CIHR TALENT · CAREERS IN HR · TENURE · SUNNY STORIES · SUNNY CLEANS
+  </text>
+</svg>
