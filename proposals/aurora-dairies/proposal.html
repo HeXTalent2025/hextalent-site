@@ -1044,26 +1044,43 @@
       status.className = 'status';
       status.textContent = 'Submitting…';
 
-      const data = {
-        name: form.name.value.trim(),
-        position: form.position.value.trim(),
-        email: form.email.value.trim(),
-        company: form.company.value.trim(),
-        agree: form.agree.checked,
-        proposalRef: 'HT-AD-2026-01',
-        clientRef: 'Aurora Dairies',
-        acceptedAt: new Date().toISOString(),
+      const name = form.name.value.trim();
+      const position = form.position.value.trim();
+      const email = form.email.value.trim();
+      const company = form.company.value.trim();
+      const agree = form.agree.checked;
+      const proposalRef = 'HT-AD-2026-01';
+      const clientRef = 'Aurora Dairies';
+      const acceptedAt = new Date().toISOString();
+
+      const payload = {
+        _subject: `[Proposal accepted] ${clientRef} — ${proposalRef}`,
+        _template: 'table',
+        _captcha: 'false',
+        _replyto: email,
+        'Full Name': name,
+        'Position / Title': position,
+        'Email': email,
+        'Company': company,
+        'Acceptance confirmed': agree ? 'Yes — signatory has confirmed authority to bind the Company and accepted the Terms of Business.' : 'No',
+        'Proposal Reference': proposalRef,
+        'Client Reference': clientRef,
+        'Accepted At (UTC)': acceptedAt,
+        'Accepted From (page)': location.href,
       };
 
       try {
-        const res = await fetch('/api/accept-proposal', {
+        const res = await fetch('https://formsubmit.co/ajax/jeff@hextalent.com.au', {
           method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(data)
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
         });
-        if (!res.ok) {
-          const errBody = await res.json().catch(() => ({}));
-          throw new Error(errBody.error || ('Server responded ' + res.status));
+        const body = await res.json().catch(() => ({}));
+        if (!res.ok || (body.success && String(body.success).toLowerCase() !== 'true')) {
+          throw new Error(body.message || ('Server responded ' + res.status));
         }
         formCard.style.display = 'none';
         success.style.display = 'block';
