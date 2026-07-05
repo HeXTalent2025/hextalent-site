@@ -1,0 +1,12 @@
+# Keep proposal source directories out of the public deploy.
+# Each client's canonical (guessable-name) directory holds the editable
+# source; only the unguessable-slug directory should be publicly served.
+proposals/aurora-dairies/
+
+# Local Claude Code helpers
+.claude/
+
+# Preview screenshots and build artefacts
+preview-*.jpg
+build-docx.js
+_render_*.html

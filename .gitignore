@@ -2,6 +2,8 @@
 .vercel
 .claude
 node_modules
+proposals/**/preview-*.jpg
+proposals/**/_render_*.html
 .env
 .env.local
 *.log
