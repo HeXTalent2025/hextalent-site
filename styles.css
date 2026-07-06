@@ -28,8 +28,10 @@
   --c-cihr: #6b9bb8;
   --c-careers: #7da098;
   --c-tenure: #8a8fbf;
+  --c-ecosystem: #5a9fbe;
   --c-stories: #38a2c2;
   --c-cleans: #f2c86a;
+  --c-home: #d4816a;
 
   /* Layout */
   --max: 1180px;
@@ -553,8 +555,10 @@ a {
 .card[data-accent="cihr-talent"] .card__glow { background: radial-gradient(circle, var(--c-cihr), transparent 60%); }
 .card[data-accent="careers-in-hr"] .card__glow { background: radial-gradient(circle, var(--c-careers), transparent 60%); }
 .card[data-accent="tenure"] .card__glow { background: radial-gradient(circle, var(--c-tenure), transparent 60%); }
+.card[data-accent="careers-ecosystem"] .card__glow { background: radial-gradient(circle, var(--c-ecosystem), transparent 60%); }
 .card[data-accent="sunny-stories"] .card__glow { background: radial-gradient(circle, var(--c-stories), transparent 60%); }
 .card[data-accent="sunny-cleans"] .card__glow { background: radial-gradient(circle, var(--c-cleans), transparent 60%); }
+.card[data-accent="sunny-home"] .card__glow { background: radial-gradient(circle, var(--c-home), transparent 60%); }
 
 .card__top {
   display: flex;
@@ -628,8 +632,10 @@ a {
 .card[data-accent="cihr-talent"] .card__title::after { background: var(--c-cihr); }
 .card[data-accent="careers-in-hr"] .card__title::after { background: var(--c-careers); }
 .card[data-accent="tenure"] .card__title::after { background: var(--c-tenure); }
+.card[data-accent="careers-ecosystem"] .card__title::after { background: var(--c-ecosystem); }
 .card[data-accent="sunny-stories"] .card__title::after { background: var(--c-stories); }
 .card[data-accent="sunny-cleans"] .card__title::after { background: var(--c-cleans); }
+.card[data-accent="sunny-home"] .card__title::after { background: var(--c-home); }
 
 .card:hover .card__title::after {
   transform: scaleX(1);
@@ -673,8 +679,10 @@ a {
 .card[data-accent="cihr-talent"] .card__features li::before { background: var(--c-cihr); opacity: 0.7; }
 .card[data-accent="careers-in-hr"] .card__features li::before { background: var(--c-careers); opacity: 0.7; }
 .card[data-accent="tenure"] .card__features li::before { background: var(--c-tenure); opacity: 0.7; }
+.card[data-accent="careers-ecosystem"] .card__features li::before { background: var(--c-ecosystem); opacity: 0.7; }
 .card[data-accent="sunny-stories"] .card__features li::before { background: var(--c-stories); opacity: 0.7; }
 .card[data-accent="sunny-cleans"] .card__features li::before { background: var(--c-cleans); opacity: 0.7; }
+.card[data-accent="sunny-home"] .card__features li::before { background: var(--c-home); opacity: 0.7; }
 
 .card__link {
   display: inline-flex;
@@ -703,6 +711,119 @@ a {
 
 .card__link:hover svg {
   transform: translateX(3px);
+}
+
+/* =========================================================================
+   Ecosystem card — full-width featured layout with nested surfaces
+   ========================================================================= */
+
+.card--ecosystem {
+  grid-column: 1 / -1;
+  padding: 44px 44px 40px;
+}
+
+.card--ecosystem .card__title {
+  font-size: 36px;
+}
+
+.card--ecosystem .card__desc {
+  font-size: 16px;
+  max-width: 780px;
+}
+
+.surfaces {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 28px 0 12px;
+  padding: 28px 0 4px;
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.surface {
+  position: relative;
+  padding-top: 10px;
+}
+
+.surface::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 400ms var(--ease);
+}
+
+.surface:hover::before {
+  width: 56px;
+}
+
+.surface--market::before { background: var(--c-cihr); }
+.surface--talent::before { background: var(--c-careers); }
+.surface--tenure::before { background: var(--c-tenure); }
+
+.surface__name {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.surface__desc {
+  font-size: 13.5px;
+  color: var(--text-mute);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.surface__link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+  padding-bottom: 3px;
+  border-bottom: 1px dashed var(--border-strong);
+  transition: color 250ms var(--ease), border-color 250ms var(--ease);
+}
+
+.surface--market .surface__link:hover { color: var(--c-cihr); border-color: var(--c-cihr); }
+.surface--talent .surface__link:hover { color: var(--c-careers); border-color: var(--c-careers); }
+.surface--tenure .surface__link:hover { color: var(--c-tenure); border-color: var(--c-tenure); }
+
+/* =========================================================================
+   Card footnote — subtle contextual line below main content
+   ========================================================================= */
+
+.card__footnote {
+  font-size: 13px;
+  color: var(--text-mute);
+  line-height: 1.55;
+  margin: 20px 0 24px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.015);
+  border-left: 2px solid var(--border-strong);
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.card__footnote--compact {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-dim);
+  background: transparent;
+  border-left: 1px solid var(--border);
 }
 
 /* =========================================================================
@@ -833,6 +954,19 @@ a {
 
   .cards--trio {
     grid-template-columns: 1fr;
+  }
+
+  .card--ecosystem {
+    padding: 32px 28px;
+  }
+
+  .card--ecosystem .card__title {
+    font-size: 30px;
+  }
+
+  .surfaces {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .ventures__divider {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HeXTalent — The Humanistic eXchange</title>
-  <meta name="description" content="HeXTalent is the parent company behind a portfolio of focused, human-first products — including CiHR Talent, Careers in HR, Tenure, Sunny Stories, and Sunny Cleans." />
+  <meta name="description" content="HeXTalent is the parent company behind a portfolio of focused, human-first products — the Careers in HR ecosystem for Australian HR professionals (Market, Talent, Tenure), plus Sunshine Coast consumer ventures Sunny Stories, Sunny Cleans, and Sunny Home." />
   <meta name="theme-color" content="#0a0c10" />
   <link rel="canonical" href="https://hextalent.com.au/" />
 
@@ -58,11 +58,20 @@
       "https://www.linkedin.com/company/hextalent"
     ],
     "subOrganization": [
-      { "@type": "Organization", "name": "CiHR Talent", "url": "https://talent.careersinhr.com.au/" },
-      { "@type": "Organization", "name": "Careers in HR", "url": "https://www.careersinhr.com.au/" },
-      { "@type": "Organization", "name": "Tenure", "url": "https://tenure.careersinhr.com.au/" },
+      {
+        "@type": "Organization",
+        "name": "Careers in HR",
+        "url": "https://www.careersinhr.com.au/",
+        "description": "Australia's specialist HR ecosystem — HR market visibility, profile-led career positioning, and private in-role reflection under a single annual membership.",
+        "subOrganization": [
+          { "@type": "Organization", "name": "Market — Careers in HR", "url": "https://market.careersinhr.com.au/" },
+          { "@type": "Organization", "name": "Talent — Careers in HR", "url": "https://talent.careersinhr.com.au/" },
+          { "@type": "Organization", "name": "Tenure — Careers in HR", "url": "https://tenure.careersinhr.com.au/" }
+        ]
+      },
       { "@type": "Organization", "name": "Sunny Stories", "url": "https://sunnystories.co/" },
-      { "@type": "Organization", "name": "Sunny Cleans", "url": "https://sunnycleans.com.au/" }
+      { "@type": "Organization", "name": "Sunny Cleans", "url": "https://sunnycleans.com.au/" },
+      { "@type": "Organization", "name": "Sunny Home", "url": "https://sunnyhome.com.au/" }
     ]
   }
   </script>
@@ -138,71 +147,61 @@
       <div class="ventures__group" data-group="talent">
         <header class="group-head">
           <p class="eyebrow" data-anim="fade-up">Group 01 — Talent Infrastructure</p>
-          <h2 data-anim="fade-up" data-delay="100">Specialist talent products for the HR profession.</h2>
+          <h2 data-anim="fade-up" data-delay="100">Australia's specialist HR ecosystem.</h2>
           <p class="group-head__lede" data-anim="fade-up" data-delay="200">
-            Dedicated infrastructure for the Australian HR market — spanning structured opportunity discovery, deeper career positioning, and private reflection while you're still living the work.
+            A connected ecosystem for Australian HR professionals — HR market visibility, profile-led career positioning, and private in-role reflection under a single annual membership. HeXTalent's specialist HR recruitment and advisory practice sits behind it.
           </p>
         </header>
 
-        <div class="cards cards--trio">
-          <article class="card" data-accent="cihr-talent" data-anim="fade-up">
+        <div class="cards">
+          <article class="card card--ecosystem" data-accent="careers-ecosystem" data-anim="fade-up">
             <div class="card__top">
-              <span class="card__tag">Career platform</span>
-              <span class="card__status"><span class="dot"></span>Live</span>
-            </div>
-            <h3 class="card__title">CiHR Talent</h3>
-            <p class="card__desc">
-              A career positioning and support platform for HR professionals — built to help people get clearer on direction, strengthen how they present themselves, and move toward better-fit opportunities with more confidence.
-            </p>
-            <ul class="card__features">
-              <li>Guided career-story build journey</li>
-              <li>HR-specific language and taxonomy</li>
-              <li>Support Studio tools that go beyond the CV</li>
-            </ul>
-            <a class="card__link" href="https://talent.careersinhr.com.au/" target="_blank" rel="noopener">
-              <span>Visit talent.careersinhr.com.au</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <div class="card__glow" aria-hidden="true"></div>
-          </article>
-
-          <article class="card" data-accent="careers-in-hr" data-anim="fade-up" data-delay="100">
-            <div class="card__top">
-              <span class="card__tag">Market platform</span>
+              <span class="card__tag">Ecosystem · membership</span>
               <span class="card__status"><span class="dot"></span>Live</span>
             </div>
             <h3 class="card__title">Careers in HR</h3>
             <p class="card__desc">
-              Australia's specialist HR market platform — bringing together live HR opportunities from across LinkedIn, SEEK and employer career sites into a calmer, more structured, HR-specific environment.
+              Careers in HR Australia has developed into a connected ecosystem for Australian HR professionals — bringing together HR market visibility, profile-led career positioning, and private in-role reflection. One annual membership unlocks all three surfaces.
             </p>
-            <ul class="card__features">
-              <li>Live HR-only job aggregation across Australia</li>
-              <li>Distinct employer-direct and recruiter-led lanes</li>
-              <li>Emerging market intelligence layer</li>
-            </ul>
+
+            <div class="surfaces">
+              <div class="surface surface--market">
+                <h4 class="surface__name">Market</h4>
+                <p class="surface__desc">
+                  The HR opportunity intelligence surface — live Australian HR roles from multiple sources in one HR-only view, with employer-led roles, recruiter-led assignments, category and location filtering, and AI-supported role summaries.
+                </p>
+                <a class="surface__link" href="https://market.careersinhr.com.au" target="_blank" rel="noopener">
+                  market.careersinhr.com.au
+                </a>
+              </div>
+
+              <div class="surface surface--talent">
+                <h4 class="surface__name">Talent</h4>
+                <p class="surface__desc">
+                  The profile and positioning surface — a guided profile build, skills and experience capture, visibility preferences, and aligned opportunities based on the user's profile signals.
+                </p>
+                <a class="surface__link" href="https://talent.careersinhr.com.au" target="_blank" rel="noopener">
+                  talent.careersinhr.com.au
+                </a>
+              </div>
+
+              <div class="surface surface--tenure">
+                <h4 class="surface__name">Tenure</h4>
+                <p class="surface__desc">
+                  The private in-role reflection surface — weekly reflection prompts, career pulse tracking, role-stage context, and insight surfaces for HR professionals living the work.
+                </p>
+                <a class="surface__link" href="https://tenure.careersinhr.com.au" target="_blank" rel="noopener">
+                  tenure.careersinhr.com.au
+                </a>
+              </div>
+            </div>
+
+            <p class="card__footnote">
+              Employers can submit HR opportunities into the ecosystem to appear in the HR Market Board, with optional promoted visibility across the wider Careers in HR network.
+            </p>
+
             <a class="card__link" href="https://www.careersinhr.com.au/" target="_blank" rel="noopener">
               <span>Visit careersinhr.com.au</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <div class="card__glow" aria-hidden="true"></div>
-          </article>
-
-          <article class="card" data-accent="tenure" data-anim="fade-up" data-delay="200">
-            <div class="card__top">
-              <span class="card__tag">Reflective workspace</span>
-              <span class="card__status"><span class="dot"></span>Live</span>
-            </div>
-            <h3 class="card__title">Tenure</h3>
-            <p class="card__desc">
-              A quiet, private space to notice fit, friction, growth and direction while you're still living the work — not months later, once memory has softened. The private reflection layer within the Careers in HR and CiHR Talent ecosystem.
-            </p>
-            <ul class="card__features">
-              <li>Capture reflections and quick pulse signals as a role unfolds</li>
-              <li>Stage-aware prompts, lenses and frameworks — only when useful</li>
-              <li>Builds a private body of evidence for your next move</li>
-            </ul>
-            <a class="card__link" href="https://tenure.careersinhr.com.au/" target="_blank" rel="noopener">
-              <span>Visit tenure.careersinhr.com.au</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
             <div class="card__glow" aria-hidden="true"></div>
@@ -223,7 +222,7 @@
           </p>
         </header>
 
-        <div class="cards">
+        <div class="cards cards--trio">
           <article class="card" data-accent="sunny-stories" data-anim="fade-up">
             <div class="card__top">
               <span class="card__tag">Consumer product</span>
@@ -263,6 +262,28 @@
               <span>Visit sunnycleans.com.au</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
+            <div class="card__glow" aria-hidden="true"></div>
+          </article>
+
+          <article class="card" data-accent="sunny-home" data-anim="fade-up" data-delay="200">
+            <div class="card__top">
+              <span class="card__tag">AI memory</span>
+              <span class="card__status"><span class="dot"></span>Early access</span>
+            </div>
+            <h3 class="card__title">Sunny Home</h3>
+            <p class="card__desc">
+              <em>An AI memory for your home.</em> For homeowners tired of carrying the whole house in their head. Send Sunny anything to do with your home — a receipt, a warranty, a quote, a photo, a passing thought — and it remembers, works out what it is, and hands it back the moment you ask.
+            </p>
+            <ul class="card__features">
+              <li>Send it your way — forward an email, upload a file, or jot a quick note. No folders, no tags.</li>
+              <li>Ask in plain English — <em>"Who serviced the air con?"</em> — and get it back in seconds.</li>
+              <li>Private by default — your home's memory is yours; never sold, never used to train AI.</li>
+            </ul>
+            <a class="card__link" href="https://sunnyhome.com.au" target="_blank" rel="noopener">
+              <span>Visit sunnyhome.com.au</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <p class="card__footnote card__footnote--compact">Built by the team behind Sunny Cleans.</p>
             <div class="card__glow" aria-hidden="true"></div>
           </article>
         </div>
