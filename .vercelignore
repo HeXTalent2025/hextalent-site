@@ -1,6 +1,6 @@
-# Keep proposal source directories out of the public deploy.
-# Each client's canonical (guessable-name) directory holds the editable
-# source; only the unguessable-slug directory should be publicly served.
+# Keep client work and proposal source directories out of the public deploy.
+# Only the unguessable-slug directories in /proposals/ should be publicly served.
+clients/
 proposals/aurora-dairies/
 
 # Local Claude Code helpers

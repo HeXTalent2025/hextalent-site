@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign Overview — Aurora Dairies · HeXTalent</title>
+  <meta name="description" content="Recruitment campaign overview for Aurora Dairies — HR Business Partner and HR Analyst & Systems Administrator appointments." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* =================================================================
+       Palette + type
+       ================================================================= */
+    :root {
+      --ink: #0a0c10;
+      --paper: #ffffff;
+      --paper-soft: #f7f5f0;
+      --border: #d8d3c8;
+      --border-strong: #b5ad9d;
+      --text: #14181f;
+      --text-soft: #4a4d55;
+      --text-mute: #7a7d84;
+      --accent: #5a9fbe;
+      --accent-deep: #3d7a9c;
+      --cream: #f1ece1;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--paper-soft);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    h1, h2, h3, .display, .wordmark { font-family: 'Fraunces', 'Times New Roman', serif; letter-spacing: -0.01em; }
+
+    /* Page container */
+    .page {
+      background: var(--paper);
+      max-width: 210mm;
+      margin: 24px auto;
+      padding: 24mm 22mm;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      min-height: 297mm;
+      position: relative;
+    }
+
+    /* Cover page */
+    .page--cover {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cover-inner {
+      text-align: center;
+      padding: 40mm 20mm;
+      max-width: 160mm;
+    }
+    .cover-mark {
+      width: 90px; height: 90px;
+      margin: 0 auto 32px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--cream);
+    }
+    .cover-mark svg { width: 100%; height: 100%; }
+    .cover-wordmark {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 62px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .cover-wordmark .x { color: var(--accent); }
+    .cover-tagline {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 60px;
+    }
+    .cover-rule {
+      width: 60px; height: 1px;
+      background: rgba(241,236,225,0.3);
+      margin: 0 auto 48px;
+    }
+    .cover-doctype {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .cover-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1.2;
+      color: var(--cream);
+      margin-bottom: 42px;
+    }
+    .cover-meta {
+      display: inline-block;
+      text-align: left;
+      font-size: 13px;
+      color: rgba(241,236,225,0.75);
+      line-height: 1.9;
+    }
+    .cover-meta .lbl {
+      display: inline-block;
+      width: 90px;
+      color: rgba(241,236,225,0.45);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .cover-footer {
+      position: absolute;
+      bottom: 24mm;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(241,236,225,0.35);
+    }
+
+    /* Page header */
+    .page__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10mm;
+      margin-bottom: 8mm;
+      border-bottom: 1px solid var(--border);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+    }
+    .page__header .brand {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-soft);
+    }
+    .page__header .brand svg { width: 14px; height: 14px; }
+    .page__header .ref {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 12px;
+      color: var(--text-mute);
+    }
+
+    /* Typography */
+    .eyebrow {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1.doc-h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    h2.doc-h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      font-size: 21px;
+      color: var(--ink);
+      margin: 24px 0 10px;
+      letter-spacing: -0.01em;
+    }
+    h3.doc-h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--ink);
+      margin: 18px 0 6px;
+      letter-spacing: 0;
+    }
+
+    p { margin-bottom: 12px; color: var(--text); }
+    p.lede {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    ul.doc-list, ol.doc-list {
+      margin: 0 0 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul.doc-list li, ol.doc-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+    }
+    ul.doc-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 10px; height: 1px;
+      background: var(--accent);
+    }
+    ol.doc-list { counter-reset: doclist; }
+    ol.doc-list li { counter-increment: doclist; }
+    ol.doc-list li::before {
+      content: counter(doclist) '.';
+      position: absolute;
+      left: 0; top: 0;
+      color: var(--accent-deep);
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    /* Tables */
+    table.doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 20px;
+      font-size: 13px;
+    }
+    table.doc-table th, table.doc-table td {
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.doc-table th {
+      background: var(--paper-soft);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-strong);
+    }
+    table.doc-table td.key {
+      font-weight: 500;
+      color: var(--ink);
+      width: 32%;
+    }
+
+    /* Callout */
+    .callout {
+      background: var(--paper-soft);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    /* Screen padding */
+    @media screen {
+      body { background: var(--paper-soft); padding: 12px 0 60px; }
+    }
+
+    /* Print styles */
+    @media print {
+      @page {
+        size: A4;
+        margin: 20mm 22mm 22mm;
+        @bottom-right {
+          content: counter(page);
+          font-family: 'Inter', sans-serif;
+          font-size: 9pt;
+          color: #7a7d84;
+          letter-spacing: 0.14em;
+        }
+        @bottom-left {
+          content: "HeXTalent · Aurora Dairies · Campaign Overview";
+          font-family: 'Inter', sans-serif;
+          font-size: 8pt;
+          color: #7a7d84;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+        }
+      }
+      @page :first {
+        @bottom-right { content: none; }
+        @bottom-left { content: none; }
+      }
+      .page--cover {
+        padding: 0 !important;
+        min-height: 245mm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body { background: white; font-size: 11.5pt; line-height: 1.55; }
+      .page {
+        box-shadow: none;
+        margin: 0;
+        max-width: none;
+        width: 210mm;
+        padding: 18mm 22mm 20mm;
+        page-break-after: always;
+        min-height: 260mm;
+        position: relative;
+      }
+      .page:last-child { page-break-after: auto; }
+      .page--cover {
+        padding: 0;
+        height: 297mm;
+        min-height: 297mm;
+        overflow: hidden;
+      }
+
+      h1.doc-h1 { font-size: 26pt; margin-bottom: 14pt; }
+      h2.doc-h2 { font-size: 16pt; margin: 16pt 0 8pt; }
+      h3.doc-h3 { font-size: 10.5pt; margin: 12pt 0 4pt; }
+      p { margin-bottom: 8pt; }
+      p.lede { font-size: 14pt; margin-bottom: 14pt; }
+      ul.doc-list, ol.doc-list { margin-bottom: 10pt; }
+      ul.doc-list li, ol.doc-list li { margin-bottom: 4pt; }
+      table.doc-table { font-size: 10.5pt; margin: 10pt 0 14pt; }
+      table.doc-table th, table.doc-table td { padding: 7pt 10pt; }
+
+      table.doc-table, .callout, .closing-block { page-break-inside: avoid; }
+      ul.doc-list li, ol.doc-list li { page-break-inside: avoid; }
+      h2.doc-h2, h3.doc-h3 { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== COVER PAGE ==================== -->
+<section class="page page--cover">
+  <div class="cover-inner">
+    <div class="cover-mark">
+      <svg viewBox="0 0 8467 8467" fill="currentColor">
+        <path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/>
+      </svg>
+    </div>
+    <div class="cover-wordmark">He<span class="x">X</span>Talent</div>
+    <div class="cover-tagline">The Humanistic eXchange</div>
+
+    <div class="cover-rule"></div>
+
+    <div class="cover-doctype">Recruitment Campaign Overview</div>
+    <div class="cover-title">Prepared for<br/>Aurora Dairies</div>
+
+    <div class="cover-meta">
+      <div><span class="lbl">Attention</span> Jenna Tran, General Manager Human Resources</div>
+      <div><span class="lbl">Prepared by</span> Jeff Teale, Founder &amp; Director</div>
+      <div><span class="lbl">Prepared</span> <span data-today>—</span></div>
+      <div><span class="lbl">Reference</span> HT-AD-2026-01 · CO</div>
+    </div>
+  </div>
+  <div class="cover-footer">Hex Talent Pty Ltd &nbsp;·&nbsp; Sunshine Coast, Queensland</div>
+</section>
+
+<!-- ==================== OPENING NOTE + ENGAGEMENT AT A GLANCE ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Aurora Dairies</div>
+  </header>
+
+  <div class="eyebrow">A note before you read on</div>
+  <h1 class="doc-h1">Jenna,</h1>
+
+  <p class="lede">Thank you again for the time yesterday — really appreciated the openness across everything from the CEO context through to how you think about leadership, flexibility, and the type of person who'll thrive at Aurora Dairies. You gave me the fuel for what will be a well-considered, targeted search.</p>
+
+  <p>This document is a working record of what I've captured, how I intend to run both searches, and what to expect from me over the coming weeks. It's yours to reference throughout the process. Please flag anything that doesn't match your read, or that I've missed — better to align now than mid-search.</p>
+
+  <p>Warmly,<br/><em>Jeff</em></p>
+
+  <h2 class="doc-h2">Engagement at a glance</h2>
+
+  <table class="doc-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Role 1</th>
+        <th>Role 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="key">Role</td>
+        <td>Human Resources Business Partner</td>
+        <td>HR Analyst &amp; Systems Administrator</td>
+      </tr>
+      <tr>
+        <td class="key">Employment</td>
+        <td>Full time, permanent</td>
+        <td>Part time (0.6 FTE / 3 days), permanent</td>
+      </tr>
+      <tr>
+        <td class="key">Location</td>
+        <td>Melbourne CBD Head Office</td>
+        <td>Melbourne CBD Head Office</td>
+      </tr>
+      <tr>
+        <td class="key">Hybrid pattern</td>
+        <td>~2–3 days in office</td>
+        <td>~2 of 3 days in office</td>
+      </tr>
+      <tr>
+        <td class="key">Package</td>
+        <td>Up to $150,000 pa + super</td>
+        <td>Circa $80,000 FTE + super (pro-rata to 0.6)</td>
+      </tr>
+      <tr>
+        <td class="key">Reports to</td>
+        <td>GM HR (you)</td>
+        <td>GM HR (you)</td>
+      </tr>
+      <tr>
+        <td class="key">Confidentiality</td>
+        <td>Fully confidential search</td>
+        <td>Fully confidential search</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ==================== WHAT I'VE HEARD ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Aurora Dairies</div>
+  </header>
+
+  <div class="eyebrow">Context</div>
+  <h1 class="doc-h1">What I've heard about Aurora Dairies</h1>
+
+  <p>A brief written recap so you can sense-check my understanding before I start representing the business in candidate conversations.</p>
+
+  <ul class="doc-list">
+    <li>A <strong>longstanding Australian dairy business</strong> with a distributed operational footprint across Victoria and Tasmania, plus a Melbourne CBD head office and regional offices.</li>
+    <li>Currently in a <strong>standalone chapter</strong> following the transition out of asset-management structure, roughly a year in.</li>
+    <li>Currently <strong>between CEOs</strong>, with executive responsibilities shared across three senior leaders (yourself included). This has created significant autonomy for HR to move at pace on what matters.</li>
+    <li><strong>Data uplift is the number-one strategic focus</strong> across the business, led by the new Chief Technical Services Officer. HR data uplift sits as a parallel priority within your function.</li>
+    <li>Workforce: approximately 180 permanent, 140 casual with seasonal uplift, and ~50 corporate roles (with ~40 in Melbourne HQ).</li>
+    <li><strong>HR function is deliberately early in its standalone maturity</strong> — canvas across strategy, performance framework, L&amp;D, EVP, and benefits.</li>
+    <li>Culture: <em>"a longstanding business with a start-up vibe"</em> — get-shit-done mentality, high cross-functional collaboration, blame-free environment for good-faith failures.</li>
+  </ul>
+
+  <div class="callout">
+    If any of the above doesn't feel right, let me know and I'll adjust before it hardens into how I represent the business externally.
+  </div>
+</section>
+
+<!-- ==================== ROLE 1 - HRBP ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Role 1 · HRBP</div>
+  </header>
+
+  <div class="eyebrow">Role 1</div>
+  <h1 class="doc-h1">HR Business Partner</h1>
+
+  <h2 class="doc-h2">What this role is designed to do</h2>
+  <p>Enable you to be strategic by taking meaningful ownership of operational HR delivery, project execution, and employee relations casework. The role sits as a <strong>senior peer</strong> to the regional HR Advisors — not managing them, but supporting and lifting the function as a whole.</p>
+
+  <h2 class="doc-h2">Where the emphasis sits (my read)</h2>
+  <ul class="doc-list">
+    <li><strong>Operational HR:</strong> Moderate — corporate team plus support to regional advisors.</li>
+    <li><strong>Employee relations:</strong> Meaningful — investigations, letter drafting, coaching leaders. Under your oversight but with real ownership of caseload.</li>
+    <li><strong>Project delivery:</strong> Significant — performance framework rollout, HR system review, L&amp;D framework build, workforce accommodation programs, process automation.</li>
+    <li><strong>Strategic contribution:</strong> Emerging — supporting you to shape and deliver the three-year HR vision.</li>
+    <li><strong>Recruitment:</strong> Light — regional advisors own their regions; some corporate hiring only.</li>
+  </ul>
+
+  <h2 class="doc-h2">Candidate profile priorities</h2>
+  <p>The person you're looking for brings:</p>
+  <ul class="doc-list">
+    <li><strong>Strong HR generalist grounding</strong> with a real project delivery track record.</li>
+    <li><strong>Solid ER depth</strong> — the confidence to run investigations and coach managers under your oversight.</li>
+    <li><strong>Get-things-done mentality</strong> with genuine energy for a build environment.</li>
+    <li><strong>Attitude first</strong> — willingness to step outside a rigid PD when the business needs it.</li>
+    <li><strong>Openness to travel</strong> — willing to jump in the car at 6am when it matters.</li>
+    <li><strong>Long-term commitment</strong> — someone who wants to stay and build.</li>
+  </ul>
+  <p>Preferred: exposure to operational or distributed-workforce environments (any industry — dairy, agriculture, FMCG, manufacturing, logistics, resources, energy, healthcare operations).</p>
+
+  <h2 class="doc-h2">12-month "great hire" signal</h2>
+  <ul class="doc-list">
+    <li>You're materially less in the weeds.</li>
+    <li>HR maturity has advanced measurably.</li>
+    <li>At least one substantial project meaningfully delivered.</li>
+    <li>Regional advisors feel supported, not competed with.</li>
+  </ul>
+</section>
+
+<!-- ==================== ROLE 2 - HR ANALYST ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Role 2 · HR Analyst &amp; Systems Administrator</div>
+  </header>
+
+  <div class="eyebrow">Role 2</div>
+  <h1 class="doc-h1">HR Analyst &amp; Systems Administrator</h1>
+
+  <h2 class="doc-h2">What this role is designed to do</h2>
+  <p>Bring genuine workforce analytics capability to the HR function, own the HRIS environment, and provide the data foundation to move HR decisions from <em>"we think this is happening"</em> to <em>"we know this is happening."</em></p>
+
+  <h2 class="doc-h2">Where the emphasis sits (my read)</h2>
+  <ul class="doc-list">
+    <li><strong>Workforce analytics &amp; reporting:</strong> ~40% — dashboards, KPIs, ad-hoc leader reports, trend analysis.</li>
+    <li><strong>HRIS administration:</strong> ~30% — ELMO administration, workflows, first-line support, contributing to future system decisions.</li>
+    <li><strong>Process improvement &amp; project support:</strong> ~15% — UAT, automation opportunities.</li>
+    <li><strong>Data management &amp; governance:</strong> ~10% — data quality audits, privacy.</li>
+    <li><strong>Some HR admin:</strong> ~5% — corporate contracts only.</li>
+  </ul>
+
+  <h2 class="doc-h2">Candidate profile priorities</h2>
+  <p>The person you're looking for brings:</p>
+  <ul class="doc-list">
+    <li><strong>Analytical mindset first</strong> — can produce insight, not just reports.</li>
+    <li><strong>Advanced Excel</strong> as the non-negotiable technical foundation.</li>
+    <li><strong>HRIS pattern recognition</strong> — has worked in <em>any</em> HRIS platform (technology-agnostic hiring).</li>
+    <li><strong>Curiosity about workforce data</strong> and comfort in a build environment (not a maintenance seat).</li>
+    <li><strong>Long-term mindset</strong> — this role is designed to grow with the business.</li>
+  </ul>
+  <p>Preferred: Power BI, SQL, Power Query, Power Automate, or experience implementing/upgrading HR systems. Backgrounds welcome include HR Analyst, HRIS Administrator, People &amp; Culture Analyst, Data Analyst with HR crossover, or HR Admin with genuine analytical capability.</p>
+
+  <h2 class="doc-h2">Timing sensitivity</h2>
+  <p>The incumbent's leave window (25 July → 25 August) gives us a natural runway. The goal is a <strong>strong replacement signed and ready to start before the incumbent returns from leave</strong>. That shapes my sourcing pace and shortlist cadence for this role.</p>
+</section>
+
+<!-- ==================== CONFIDENTIALITY ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Confidentiality</div>
+  </header>
+
+  <div class="eyebrow">Confidentiality</div>
+  <h1 class="doc-h1">How I'll run both searches discreetly</h1>
+
+  <p>Given the sensitivity you've flagged (particularly around the HR Analyst role and the current incumbent), both searches will run under a <strong>strict confidentiality protocol</strong>.</p>
+
+  <h2 class="doc-h2">External representation</h2>
+  <ul class="doc-list">
+    <li>All advertising (LinkedIn, SEEK, Careers in HR) will run under <strong>HeXTalent branding</strong> — no mention of Aurora Dairies, no industry-identifying language, no state/region specifics beyond Melbourne CBD.</li>
+    <li>Ad copy has been carefully written to describe the opportunity without identifying the business (I've screened it against a specific list of identifying details — dairy, farms, workforce numbers, states, regional office locations, system names — none appear in the ad body).</li>
+    <li>Client name is only shared with candidates who have progressed past initial screening and committed to confidentiality.</li>
+    <li>The word track for the "why is the role being recruited now?" question refers to <em>"potential restructures in the HR team that have yet to be communicated internally"</em> — matches the language you suggested.</li>
+  </ul>
+
+  <h2 class="doc-h2">Candidate commitments</h2>
+  <p>Every candidate I engage will be asked to:</p>
+  <ul class="doc-list">
+    <li>Keep the client name confidential to themselves.</li>
+    <li>Not canvass any current Aurora Dairies employees for information.</li>
+    <li>Direct all questions to me rather than trying to source information independently.</li>
+  </ul>
+
+  <h2 class="doc-h2">CEO context — how I'll handle it</h2>
+  <p>Candidates will ask. My approach is honest but restrained: acknowledge the recent CEO departure and the current shared-leadership structure, and reframe the vacuum as the source of the current autonomy. I won't speculate about the CEO's departure beyond what's necessary.</p>
+</section>
+
+<!-- ==================== SEARCH STRATEGY + INTERVIEW PATHWAY ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Strategy &amp; Process</div>
+  </header>
+
+  <div class="eyebrow">Strategy</div>
+  <h1 class="doc-h1">Search strategy</h1>
+
+  <h2 class="doc-h2">Channels — both roles</h2>
+  <ol class="doc-list">
+    <li><strong>HeXTalent HR network</strong> — Australian HR-specialist reach, including some candidates I already have in mind for the HRBP.</li>
+    <li><strong>LinkedIn</strong> — organic posts from my personal profile and HeXTalent company page, plus targeted advertising (mid-senior HR audience, Melbourne).</li>
+    <li><strong>Careers in HR</strong> — HeXTalent's own specialist HR ecosystem, giving us direct visibility to Australia's HR audience.</li>
+    <li><strong>SEEK</strong> — broader net for both roles.</li>
+    <li><strong>Direct outreach</strong> — targeted approaches to identified passive candidates via LinkedIn InMail.</li>
+  </ol>
+
+  <h2 class="doc-h2">Timing outlook</h2>
+
+  <table class="doc-table">
+    <thead>
+      <tr>
+        <th>Milestone</th>
+        <th>HRBP</th>
+        <th>HR Analyst</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="key">Ads live</td>
+        <td>Within 48 hours of PDs finalised</td>
+        <td>Within 48 hours of PDs finalised</td>
+      </tr>
+      <tr>
+        <td class="key">First shortlist to you</td>
+        <td>~10–14 days after ads live</td>
+        <td>~10–14 days after ads live</td>
+      </tr>
+      <tr>
+        <td class="key">First-round interviews</td>
+        <td>Weeks 2–3</td>
+        <td>Weeks 2–3</td>
+      </tr>
+      <tr>
+        <td class="key">Second-round interviews</td>
+        <td>Weeks 3–5</td>
+        <td>Weeks 3–4</td>
+      </tr>
+      <tr>
+        <td class="key">Offer window</td>
+        <td>Weeks 5–6</td>
+        <td><strong>Before 25 August ideally</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Timelines are indicative — the moment I have strong candidates, they go to you sooner rather than later. I'd rather bring you two excellent candidates in week 2 than wait to build a bigger shortlist.</p>
+
+  <h2 class="doc-h2">Interview &amp; process pathway</h2>
+
+  <table class="doc-table">
+    <thead>
+      <tr>
+        <th>Stage</th>
+        <th>Interviewer</th>
+        <th>Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Screening &amp; vetting</td>
+        <td>Jeff Teale (HeXTalent)</td>
+        <td>Structured video interview via Teams, with CV deep-dive, and additional follow-up conversations or vetting as required before any candidate is presented</td>
+      </tr>
+      <tr>
+        <td>First interview</td>
+        <td>Jenna Tran</td>
+        <td>In-person Melbourne CBD (Teams if unavoidable)</td>
+      </tr>
+      <tr>
+        <td>Second interview</td>
+        <td>Janelle Cashen (Board Chair) + Jenna</td>
+        <td>Teams (if Janelle in Sydney) or in-person (if in Melbourne)</td>
+      </tr>
+      <tr>
+        <td>References</td>
+        <td colspan="2">HeXTalent to conduct — two references per candidate</td>
+      </tr>
+      <tr>
+        <td>Pre-employment checks</td>
+        <td colspan="2">Police check — HeXTalent to arrange (given confidentiality)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Target start date: within 6–8 weeks of offer acceptance for HRBP; before 25 August for HR Analyst.</p>
+</section>
+
+<!-- ==================== COMMERCIAL + COMMS + OPEN ITEMS ==================== -->
+<section class="page">
+  <header class="page__header">
+    <div class="brand">
+      <svg viewBox="0 0 8467 8467" fill="currentColor" style="color: var(--accent);"><path d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/></svg>
+      HeXTalent · Campaign Overview
+    </div>
+    <div class="ref">Working Together</div>
+  </header>
+
+  <div class="eyebrow">Working together</div>
+  <h1 class="doc-h1">Commercials, cadence, and next steps</h1>
+
+  <h2 class="doc-h2">Commercial recap</h2>
+  <p>Per the signed Terms of Business (HT-AD-2026-01):</p>
+  <ul class="doc-list">
+    <li><strong>Engagement fee:</strong> $3,000 + GST — invoiced and settled.</li>
+    <li><strong>Placement fee:</strong> 15% of total remuneration per successful placement.</li>
+    <li><strong>Engagement fee credit:</strong> Applied pro-rata against successful placement invoices.</li>
+    <li><strong>Replacement guarantee:</strong> 6 months for permanent placements of 12+ months.</li>
+    <li><strong>Governing law:</strong> Queensland with non-exclusive Australian jurisdiction.</li>
+  </ul>
+
+  <h2 class="doc-h2">Communication cadence</h2>
+  <ul class="doc-list">
+    <li><strong>Weekly written update every Friday</strong> — shortlist status, activity summary, upcoming week.</li>
+    <li><strong>Ad-hoc as needed</strong> — anything urgent won't wait for Friday.</li>
+    <li><strong>Small shortlist batches</strong> — 2–3 candidates at a time, not bulk drops.</li>
+    <li><strong>Interview coordination</strong> — I'll offer time blocks based on your availability; happy to work around your diary.</li>
+    <li><strong>No overbearing check-ins</strong> — you'll hear from me when I have something useful to say.</li>
+  </ul>
+
+  <h2 class="doc-h2">Open items — where I need your input</h2>
+  <p>To keep the campaign moving cleanly, the following would be helpful when you're able:</p>
+  <ol class="doc-list">
+    <li>Final versions of both position descriptions — you mentioned you'd refine and send through.</li>
+    <li>Confirmation of final salary top-end for the HRBP role (I've been working with up to $150,000).</li>
+    <li>Interview availability windows for the next 4–6 weeks so I can pace shortlist submissions.</li>
+    <li>Any specific stakeholders (beyond yourself and Janelle) you'd like me to be aware of when briefing candidates on the role and business context.</li>
+  </ol>
+  <p>No rush on any of these — I'll begin sourcing immediately based on what we discussed yesterday. The above just sharpens what I send you.</p>
+
+  <h2 class="doc-h2">What I'll do this week</h2>
+  <ul class="doc-list">
+    <li><strong>Today / tomorrow:</strong> Finalise LinkedIn and SEEK ad copy against the anonymisation checklist and prepare branded ad-card visuals.</li>
+    <li><strong>Within 48 hours:</strong> Ads live across LinkedIn, SEEK, and Careers in HR.</li>
+    <li><strong>This week:</strong> First round of direct approaches to identified passive candidates.</li>
+    <li><strong>End of week:</strong> First activity summary to you.</li>
+  </ul>
+
+  <div class="closing-block">
+    <p style="margin-top: 30px; font-family: 'Fraunces', serif; font-size: 16px; font-style: italic;">Warmly,</p>
+    <p style="margin-top: 14px; font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; color: var(--ink);">Jeff Teale</p>
+    <p style="font-size: 12px; color: var(--text-soft); margin-top: 2px; line-height: 1.5;">
+      Founder &amp; Director, Hex Talent Pty Ltd (trading as HeXTalent) · <a href="mailto:jeff@hextalent.com.au" style="color: var(--accent-deep);">jeff@hextalent.com.au</a> · 0413 682 586 · <a href="https://hextalent.com.au" style="color: var(--accent-deep);">hextalent.com.au</a>
+    </p>
+  </div>
+
+  <div class="callout" style="margin-top: 32px;">
+    This document is confidential and prepared solely for Aurora Dairies. It contains internal search strategy and should not be circulated externally.
+  </div>
+</section>
+
+<script>
+  (function(){
+    const d = new Date();
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const dateStr = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+    document.querySelectorAll('[data-today]').forEach(el => el.textContent = dateStr);
+  })();
+</script>
+
+</body>
+</html>

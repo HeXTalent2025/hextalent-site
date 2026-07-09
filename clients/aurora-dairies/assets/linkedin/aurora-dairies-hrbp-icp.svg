@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Inter:wght@400;500&amp;display=swap');
+      .brand      { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; letter-spacing: 0.02em; }
+      .eyebrow    { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; letter-spacing: 0.28em; }
+      .title      { font-family: 'Fraunces', 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.03em; }
+      .num        { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; letter-spacing: 0.24em; }
+      .stmt       { font-family: 'Fraunces', 'Times New Roman', serif; font-style: italic; font-weight: 300; letter-spacing: -0.005em; }
+      .cta        { font-family: 'Fraunces', 'Times New Roman', serif; font-style: italic; font-weight: 300; letter-spacing: 0.005em; }
+      .tagline    { font-family: 'Fraunces', 'Times New Roman', serif; font-style: italic; font-weight: 300; letter-spacing: 0.02em; }
+    </style>
+    <radialGradient id="orbTop" cx="0.28" cy="0.14" r="0.6">
+      <stop offset="0" stop-color="#5a9fbe" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#5a9fbe" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbBottom" cx="0.85" cy="0.9" r="0.55">
+      <stop offset="0" stop-color="#7ab8d4" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#7ab8d4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="0" cy="0" r="1.4" fill="#2a3441" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1080" height="1350" fill="#0a0c10"/>
+  <rect width="1080" height="1350" fill="url(#dots)"/>
+  <rect width="1080" height="1350" fill="url(#orbTop)"/>
+  <rect width="1080" height="1350" fill="url(#orbBottom)"/>
+
+  <!-- header row -->
+  <g transform="translate(96, 96)">
+    <svg x="0" y="0" width="54" height="54" viewBox="2555 2555 3355 3355" preserveAspectRatio="xMidYMid meet">
+      <path fill="#5a9fbe" d="M4055 2891l-86 49 -272 158 0 147 0 266 0 147 0 329 358 207 0 -330 0 -83 0 -330 0 -147 0 0 0 -413zm357 413l268 155 90 52 268 155 447 258 0 -413 -715 -413 0 0 -358 -207 0 413zm715 1239l0 206 -357 207 0 -1032 -90 -52 -268 -155 0 516 0 242 0 687 0 413 358 -206 89 -52 268 -155 358 -206 0 -619 -358 -207 0 413zm-1788 -826l0 -413 -357 207 0 1445 357 206 268 155 90 52 358 206 0 -79 0 -334 0 -142 0 -413 -358 -207 0 413 0 143 -358 -207 0 -1032z"/>
+    </svg>
+    <text x="74" y="38" class="brand" font-size="30" fill="#f1ece1">
+      He<tspan fill="#5a9fbe">X</tspan>Talent<tspan fill="#8a8b8b">  ·  Recruitment</tspan>
+    </text>
+  </g>
+
+  <!-- eyebrow -->
+  <g transform="translate(96, 372)">
+    <line x1="0" y1="24" x2="76" y2="24" stroke="#5a9fbe" stroke-width="2"/>
+    <text x="94" y="32" class="eyebrow" font-size="24" fill="#5a9fbe">IDEAL CANDIDATE PROFILE</text>
+  </g>
+
+  <!-- title (single line) -->
+  <text x="96" y="530" class="title" font-size="104" fill="#f1ece1">HR Business Partner</text>
+
+  <!-- Divider -->
+  <line x1="96" y1="640" x2="984" y2="640" stroke="#2a2f37" stroke-width="1"/>
+
+  <!-- Statement 1 -->
+  <text x="96"  y="720" class="num"  font-size="18" fill="#5a9fbe">01</text>
+  <text x="160" y="720" class="stmt" font-size="26" fill="#f1ece1">You're the go-to HR generalist — the person leaders</text>
+  <text x="160" y="758" class="stmt" font-size="26" fill="#f1ece1">ping when things get messy.</text>
+
+  <!-- Statement 2 -->
+  <text x="96"  y="830" class="num"  font-size="18" fill="#5a9fbe">02</text>
+  <text x="160" y="830" class="stmt" font-size="26" fill="#f1ece1">You've run investigations, drafted outcome letters,</text>
+  <text x="160" y="868" class="stmt" font-size="26" fill="#f1ece1">coached managers through hard conversations.</text>
+
+  <!-- Statement 3 -->
+  <text x="96"  y="940" class="num"  font-size="18" fill="#5a9fbe">03</text>
+  <text x="160" y="940" class="stmt" font-size="26" fill="#f1ece1">You deliver projects end-to-end — not hand off,</text>
+  <text x="160" y="978" class="stmt" font-size="26" fill="#f1ece1">but see through.</text>
+
+  <!-- Statement 4 -->
+  <text x="96"  y="1050" class="num"  font-size="18" fill="#5a9fbe">04</text>
+  <text x="160" y="1050" class="stmt" font-size="26" fill="#f1ece1">You'd rather build than maintain. A canvas beats</text>
+  <text x="160" y="1088" class="stmt" font-size="26" fill="#f1ece1">a polished process.</text>
+
+  <!-- Statement 5 -->
+  <text x="96"  y="1160" class="num"  font-size="18" fill="#5a9fbe">05</text>
+  <text x="160" y="1160" class="stmt" font-size="26" fill="#f1ece1">You want to stay somewhere long enough to see</text>
+  <text x="160" y="1198" class="stmt" font-size="26" fill="#f1ece1">your work land.</text>
+
+  <!-- Divider -->
+  <line x1="96" y1="1250" x2="984" y2="1250" stroke="#2a2f37" stroke-width="1"/>
+
+  <!-- CTA + tagline row -->
+  <g transform="translate(96, 1310)">
+    <text x="0" y="0" class="cta" font-size="30" fill="#f1ece1">Sound like you? DM Jeff.</text>
+  </g>
+  <text x="984" y="1310" class="tagline" font-size="18" fill="#5a9fbe" text-anchor="end">The Humanistic eXchange</text>
+</svg>
