@@ -26,9 +26,11 @@
 
   /* Per-project accents */
   --c-cihr: #6b9bb8;
+  --c-read: #c9a67c;
   --c-careers: #7da098;
   --c-tenure: #8a8fbf;
   --c-ecosystem: #5a9fbe;
+  --c-recruitment: #8fb1c4;
   --c-stories: #38a2c2;
   --c-cleans: #f2c86a;
   --c-home: #d4816a;
@@ -556,6 +558,7 @@ a {
 .card[data-accent="careers-in-hr"] .card__glow { background: radial-gradient(circle, var(--c-careers), transparent 60%); }
 .card[data-accent="tenure"] .card__glow { background: radial-gradient(circle, var(--c-tenure), transparent 60%); }
 .card[data-accent="careers-ecosystem"] .card__glow { background: radial-gradient(circle, var(--c-ecosystem), transparent 60%); }
+.card[data-accent="recruitment"] .card__glow { background: radial-gradient(circle, var(--c-recruitment), transparent 60%); }
 .card[data-accent="sunny-stories"] .card__glow { background: radial-gradient(circle, var(--c-stories), transparent 60%); }
 .card[data-accent="sunny-cleans"] .card__glow { background: radial-gradient(circle, var(--c-cleans), transparent 60%); }
 .card[data-accent="sunny-home"] .card__glow { background: radial-gradient(circle, var(--c-home), transparent 60%); }
@@ -633,6 +636,7 @@ a {
 .card[data-accent="careers-in-hr"] .card__title::after { background: var(--c-careers); }
 .card[data-accent="tenure"] .card__title::after { background: var(--c-tenure); }
 .card[data-accent="careers-ecosystem"] .card__title::after { background: var(--c-ecosystem); }
+.card[data-accent="recruitment"] .card__title::after { background: var(--c-recruitment); }
 .card[data-accent="sunny-stories"] .card__title::after { background: var(--c-stories); }
 .card[data-accent="sunny-cleans"] .card__title::after { background: var(--c-cleans); }
 .card[data-accent="sunny-home"] .card__title::after { background: var(--c-home); }
@@ -680,6 +684,7 @@ a {
 .card[data-accent="careers-in-hr"] .card__features li::before { background: var(--c-careers); opacity: 0.7; }
 .card[data-accent="tenure"] .card__features li::before { background: var(--c-tenure); opacity: 0.7; }
 .card[data-accent="careers-ecosystem"] .card__features li::before { background: var(--c-ecosystem); opacity: 0.7; }
+.card[data-accent="recruitment"] .card__features li::before { background: var(--c-recruitment); opacity: 0.7; }
 .card[data-accent="sunny-stories"] .card__features li::before { background: var(--c-stories); opacity: 0.7; }
 .card[data-accent="sunny-cleans"] .card__features li::before { background: var(--c-cleans); opacity: 0.7; }
 .card[data-accent="sunny-home"] .card__features li::before { background: var(--c-home); opacity: 0.7; }
@@ -731,10 +736,22 @@ a {
   max-width: 780px;
 }
 
+.card__desc--muted {
+  font-size: 14.5px;
+  color: var(--text-mute);
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.card__desc--muted em {
+  font-style: italic;
+  color: var(--text-soft);
+}
+
 .surfaces {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 36px;
   margin: 28px 0 12px;
   padding: 28px 0 4px;
   border-top: 1px solid var(--border);
@@ -764,6 +781,7 @@ a {
 }
 
 .surface--market::before { background: var(--c-cihr); }
+.surface--read::before { background: var(--c-read); }
 .surface--talent::before { background: var(--c-careers); }
 .surface--tenure::before { background: var(--c-tenure); }
 
@@ -796,8 +814,28 @@ a {
 }
 
 .surface--market .surface__link:hover { color: var(--c-cihr); border-color: var(--c-cihr); }
+.surface--read .surface__link:hover { color: var(--c-read); border-color: var(--c-read); }
 .surface--talent .surface__link:hover { color: var(--c-careers); border-color: var(--c-careers); }
 .surface--tenure .surface__link:hover { color: var(--c-tenure); border-color: var(--c-tenure); }
+
+/* =========================================================================
+   Adjunct card — companion to the ecosystem card (smaller, quieter)
+   ========================================================================= */
+
+.card--adjunct {
+  grid-column: 1 / -1;
+  padding: 36px 40px 34px;
+  background: var(--bg-elev);
+}
+
+.card--adjunct .card__title {
+  font-size: 26px;
+}
+
+.card--adjunct .card__desc {
+  font-size: 15px;
+  max-width: 780px;
+}
 
 /* =========================================================================
    Card footnote — subtle contextual line below main content
@@ -962,6 +1000,14 @@ a {
 
   .card--ecosystem .card__title {
     font-size: 30px;
+  }
+
+  .card--adjunct {
+    padding: 30px 26px;
+  }
+
+  .card--adjunct .card__title {
+    font-size: 24px;
   }
 
   .surfaces {
