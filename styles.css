@@ -515,36 +515,19 @@ button:focus-visible {
   top: 110px;
 }
 
-.founder__photo img,
-.founder__photo-placeholder {
+.founder__photo picture {
+  display: block;
+  position: relative;
+}
+
+.founder__photo img {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
-  border-radius: var(--radius);
   object-fit: cover;
-}
-
-.founder__photo-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  background: radial-gradient(circle at 50% 40%, rgba(90, 159, 190, 0.16), transparent 65%), var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-dim);
-}
-
-.founder__photo-placeholder svg {
-  width: 96px;
-  height: 96px;
-  color: var(--border-hover);
-}
-
-.founder__photo-placeholder span {
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-mute);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 30px 80px -30px rgba(90, 159, 190, 0.35);
 }
 
 .founder__title {
@@ -1473,16 +1456,7 @@ button:focus-visible {
 
   .founder__photo {
     position: static;
-    max-width: 180px;
-  }
-
-  .founder__photo-placeholder svg {
-    width: 56px;
-    height: 56px;
-  }
-
-  .founder__photo-placeholder span {
-    font-size: 10px;
+    max-width: 220px;
   }
 
   .card--feature {
