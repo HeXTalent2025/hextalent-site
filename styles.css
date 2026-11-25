@@ -37,6 +37,7 @@
   --c-answer: #7fc4b0;
   --c-estates: #c98f6b;
   --c-onrecord: #d98ca8;
+  --c-patch: #a9c46a;
 
   /* Status dots */
   --dot-live: #5dd39e;
@@ -854,6 +855,7 @@ button:focus-visible {
 .card[data-accent="answer-ready"] .card__glow { background: radial-gradient(circle, var(--c-answer), transparent 60%); }
 .card[data-accent="sunny-estates"] .card__glow { background: radial-gradient(circle, var(--c-estates), transparent 60%); }
 .card[data-accent="on-record"] .card__glow { background: radial-gradient(circle, var(--c-onrecord), transparent 60%); }
+.card[data-accent="patch-report"] .card__glow { background: radial-gradient(circle, var(--c-patch), transparent 60%); }
 
 .card__top {
   display: flex;
@@ -948,6 +950,7 @@ button:focus-visible {
 .card[data-accent="answer-ready"] .card__title::after { background: var(--c-answer); }
 .card[data-accent="sunny-estates"] .card__title::after { background: var(--c-estates); }
 .card[data-accent="on-record"] .card__title::after { background: var(--c-onrecord); }
+.card[data-accent="patch-report"] .card__title::after { background: var(--c-patch); }
 
 .card:hover .card__title::after {
   transform: scaleX(1);
@@ -999,6 +1002,7 @@ button:focus-visible {
 .card[data-accent="answer-ready"] .card__features li::before { background: var(--c-answer); opacity: 0.7; }
 .card[data-accent="sunny-estates"] .card__features li::before { background: var(--c-estates); opacity: 0.7; }
 .card[data-accent="on-record"] .card__features li::before { background: var(--c-onrecord); opacity: 0.7; }
+.card[data-accent="patch-report"] .card__features li::before { background: var(--c-patch); opacity: 0.7; }
 
 .card__features strong {
   color: var(--text-soft);
