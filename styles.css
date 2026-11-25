@@ -1623,13 +1623,7 @@ button:focus-visible {
   }
 }
 
-/* Hero positioning line + How we build origin note */
-.hero__line {
-  display: block;
-  font-weight: 500;
-  color: var(--text);
-  margin-bottom: 6px;
-}
+/* How we build origin note */
 
 .about__origin {
   max-width: 620px;
