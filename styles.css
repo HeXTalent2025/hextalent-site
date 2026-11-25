@@ -36,6 +36,7 @@
   --c-home: #d4816a;
   --c-answer: #7fc4b0;
   --c-estates: #c98f6b;
+  --c-onrecord: #d98ca8;
 
   /* Status dots */
   --dot-live: #5dd39e;
@@ -795,6 +796,11 @@ button:focus-visible {
   gap: 28px;
 }
 
+/* An odd card out at the end of a two-up grid spans the full row */
+.cards > .card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 /* Three-card group (e.g. Talent Infrastructure) */
 .cards--trio {
   grid-template-columns: repeat(3, 1fr);
@@ -847,6 +853,7 @@ button:focus-visible {
 .card[data-accent="sunny-home"] .card__glow { background: radial-gradient(circle, var(--c-home), transparent 60%); }
 .card[data-accent="answer-ready"] .card__glow { background: radial-gradient(circle, var(--c-answer), transparent 60%); }
 .card[data-accent="sunny-estates"] .card__glow { background: radial-gradient(circle, var(--c-estates), transparent 60%); }
+.card[data-accent="on-record"] .card__glow { background: radial-gradient(circle, var(--c-onrecord), transparent 60%); }
 
 .card__top {
   display: flex;
@@ -940,6 +947,7 @@ button:focus-visible {
 .card[data-accent="sunny-home"] .card__title::after { background: var(--c-home); }
 .card[data-accent="answer-ready"] .card__title::after { background: var(--c-answer); }
 .card[data-accent="sunny-estates"] .card__title::after { background: var(--c-estates); }
+.card[data-accent="on-record"] .card__title::after { background: var(--c-onrecord); }
 
 .card:hover .card__title::after {
   transform: scaleX(1);
@@ -990,6 +998,7 @@ button:focus-visible {
 .card[data-accent="sunny-home"] .card__features li::before { background: var(--c-home); opacity: 0.7; }
 .card[data-accent="answer-ready"] .card__features li::before { background: var(--c-answer); opacity: 0.7; }
 .card[data-accent="sunny-estates"] .card__features li::before { background: var(--c-estates); opacity: 0.7; }
+.card[data-accent="on-record"] .card__features li::before { background: var(--c-onrecord); opacity: 0.7; }
 
 .card__features strong {
   color: var(--text-soft);
